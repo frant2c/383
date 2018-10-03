@@ -98,7 +98,7 @@ class Window1(QWidget):
         grid.addWidget(self.cat_wellEdit, 17, 1)
         grid.addWidget(self.button, 18, 1)
         self.setLayout(grid)
-        self.setWindowTitle('Геологический Журнал')
+        self.setWindowTitle('Основная информация')
 
     @pyqtSlot()
     def extraction_1(self):
