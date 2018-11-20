@@ -114,7 +114,7 @@ class Window1(QWidget):
         horizont_factEditValue = self.horizont_factEdit.text()
         well_placeEditValue = self.well_placeEdit.text()
         diametrEditValue = self.diametrEdit.text()
-        reysisValue = self.reysis.text()
+        reysisValue = self.reysis.text() 
         intervalsValue = self.intervals.text()
 
 
@@ -635,6 +635,7 @@ class Window3(QWidget):
         column_2_1 = table_7.columns[0]
         column_2_2 = table_7.columns[1]
         column_2_3 = table_7.columns[2]
+        #Убран столбец по требованию Татнипинефть
         #column_2_4 = table_7.columns [3]
         column_2_5 = table_7.columns[3]
         column_2_6 = table_7.columns[4]
@@ -661,6 +662,7 @@ class Window3(QWidget):
             column_2_2.cells[i + 1].width = Inches(4.5)
         for i in range(self.rows):
             column_2_3.cells[i + 1].text = reys_lenth[i]
+        # Убран столбец по требованию Татнипинефть
         # for i in range (self.rows):
         # self.coreValue[i] = str(self.coreValue[i])
         # self.coreValue[i] = self.coreValue[i].replace ('.',',')
@@ -678,7 +680,7 @@ class Window3(QWidget):
 
         for i in range(self.rows):
             O[i] = str(O[i]).replace('.', ',')
-            column_2_5.cells[i + 1].text = str(self.coreValue[i])
+            column_2_5.cells[i + 1].text = str(self.coreValue[i]).replace('.', ',')
         for i in range(self.rows):
             O[i] = round(float(O[i].replace(',', '.')), 1)
             if (O[i] / 5) < 1:
